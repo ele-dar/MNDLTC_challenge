@@ -72,7 +72,9 @@ export default function Home() {
           <Typography component="h2" variant="h6">
             Psychologist ratings
           </Typography>
-          <ScoreChart />
+          <Box className={styles["chart-wrapper"]}>
+            <ScoreChart />
+          </Box>
         </Box>
 
         <Box className={styles.section}>

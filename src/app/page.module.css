@@ -18,6 +18,18 @@
   margin-top: 3rem;
 }
 
+.section > h2 {
+  margin-bottom: 1rem;
+}
+
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.chart-wrapper > canvas {
+  max-width: 75%;
+}
+
 .cards-wrapper {
   display: flex;
   justify-content: space-between;

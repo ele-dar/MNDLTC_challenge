@@ -9,8 +9,6 @@ import {
   Tooltip,
 } from "chart.js";
 import React, { useContext } from "react";
-import { FeedbackData } from "@/types";
-
 import { DataContext } from "../app/page";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip);
