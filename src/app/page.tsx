@@ -1,38 +1,51 @@
 "use client";
 
-import * as React from "react";
 import Container from "@mui/material/Container";
 import { Box, Typography } from "@mui/material";
-import data from "../data/data.json";
+import mockData from "../data/data.json";
 
 import styles from "./page.module.css";
 import ScoreChart from "@/components/ScoreChart";
 import FeedbackCard from "@/components/FeedbackCard";
+import { createContext, useState } from "react";
+import { FeedbackData } from "@/types";
+
+type DataContextType = {
+  data: FeedbackData[];
+};
+
+export const DataContext = createContext<DataContextType | undefined>(
+  undefined
+);
 
 export default function Home() {
+  const [data, setData] = useState<FeedbackData[]>(mockData.feedback);
+
   return (
-    <Container maxWidth="lg" className={styles.container}>
-      <Typography component="h1" variant="h4">
-        Our Psychologists
-      </Typography>
-
-      <Box className={styles.section}>
-        <Typography component="h2" variant="h6">
-          Psychologist ratings
+    <DataContext.Provider value={{ data }}>
+      <Container maxWidth="lg" className={styles.container}>
+        <Typography component="h1" variant="h4">
+          Our Psychologists
         </Typography>
-        <ScoreChart data={data.feedback} />
-      </Box>
 
-      <Box className={styles.section}>
-        <Typography component="h2" variant="h6">
-          User feedback
-        </Typography>
-        <Box className={styles["cards-wrapper"]}>
-          {data.feedback?.map((el) => (
-            <FeedbackCard data={el} />
-          ))}
+        <Box className={styles.section}>
+          <Typography component="h2" variant="h6">
+            Psychologist ratings
+          </Typography>
+          <ScoreChart />
         </Box>
-      </Box>
-    </Container>
+
+        <Box className={styles.section}>
+          <Typography component="h2" variant="h6">
+            User feedback
+          </Typography>
+          <Box className={styles["cards-wrapper"]}>
+            {data.map((item) => (
+              <FeedbackCard {...item} />
+            ))}
+          </Box>
+        </Box>
+      </Container>
+    </DataContext.Provider>
   );
 }

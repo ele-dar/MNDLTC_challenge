@@ -8,12 +8,18 @@ import {
   LinearScale,
   Tooltip,
 } from "chart.js";
+import React, { useContext } from "react";
+import { FeedbackData } from "@/types";
+
+import { DataContext } from "../app/page";
 
 ChartJS.register(BarElement, CategoryScale, LinearScale, Tooltip);
 
-const ScoreChart = ({ data }) => {
-  const chartLabels = data.map((el: any) => el.name);
-  const chartValues = data.map((el: any) => el.score);
+const ScoreChart: React.FC = () => {
+  const context = useContext(DataContext);
+
+  const chartLabels = context?.data.map((el: any) => el.name);
+  const chartValues = context?.data.map((el: any) => el.score);
 
   const chartData = {
     labels: chartLabels,
