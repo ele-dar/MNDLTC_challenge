@@ -1,11 +1,4 @@
 {
-  "scores": {
-    "Dr. John Smith": 4.5,
-    "Dr. Jane Doe": 4.2,
-    "Dr. Emily Brown": 4.8,
-    "Dr. Michael Green": 4.0,
-    "Dr. Sarah White": 4.7
-  },
   "feedback": [
     {
       "name": "Dr. John Smith",

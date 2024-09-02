@@ -2,6 +2,18 @@
   margin: 5rem auto;
 }
 
+.loader {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error {
+  padding: 1rem 2rem;
+}
+
 .section {
   margin-top: 3rem;
 }
