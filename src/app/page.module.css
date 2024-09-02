@@ -1,0 +1,13 @@
+.container {
+  margin: 5rem auto;
+}
+
+.section {
+  margin-top: 3rem;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}

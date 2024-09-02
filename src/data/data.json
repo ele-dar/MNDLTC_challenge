@@ -1,0 +1,36 @@
+{
+  "scores": {
+    "Dr. John Smith": 4.5,
+    "Dr. Jane Doe": 4.2,
+    "Dr. Emily Brown": 4.8,
+    "Dr. Michael Green": 4.0,
+    "Dr. Sarah White": 4.7
+  },
+  "feedback": [
+    {
+      "name": "Dr. John Smith",
+      "score": 4.5,
+      "feedback": "Very empathetic and insightful."
+    },
+    {
+      "name": "Dr. Jane Doe",
+      "score": 4.2,
+      "feedback": "Professional but could be more engaging."
+    },
+    {
+      "name": "Dr. Emily Brown",
+      "score": 4.8,
+      "feedback": "Very thorough and understanding."
+    },
+    {
+      "name": "Dr. Michael Green",
+      "score": 4.0,
+      "feedback": "Calm and composed, but a bit reserved."
+    },
+    {
+      "name": "Dr. Sarah White",
+      "score": 4.7,
+      "feedback": "Highly knowledgeable and supportive."
+    }
+  ]
+}
